@@ -218,6 +218,7 @@
       width: "260px",
       maxHeight: "320px",
       overflowY: "auto",
+      overscrollBehavior: "contain",
       border: isDark ? "1px solid #334155" : "1px solid rgba(0,0,0,.1)",
       borderRadius: "12px",
       background: isDark ? "#0f172a" : "#ffffff",
@@ -228,6 +229,7 @@
     });
     const header = document.createElement("div");
     Object.assign(header.style, {
+      flexShrink: "0",
       fontWeight: "bold",
       color: isDark ? "#94a3b8" : "#64748b",
       paddingBottom: "6px",
@@ -268,6 +270,7 @@
       historyItems.forEach((item, index) => {
         const row = document.createElement("div");
         Object.assign(row.style, {
+          flexShrink: "0",
           padding: "6px 8px",
           borderRadius: "8px",
           background: isDark ? "#1e293b" : "#f8fafc",
@@ -516,5 +519,10 @@
     if (event.key === "Escape") removeMenu();
   }, true);
 
-  window.addEventListener("scroll", removeMenu, true);
+  window.addEventListener("scroll", event => {
+    // Panelin kendi kaydırması menüyü kapatmamalı. Sayfa veya başka bir
+    // kaydırılabilir alan hareket ettiğinde eski kapatma davranışı korunur.
+    if (event.composedPath().some(node => node?.matches?.('[data-sd-element="true"]'))) return;
+    removeMenu();
+  }, true);
 })();
