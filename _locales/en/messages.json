@@ -1,0 +1,11 @@
+{
+  "extDescription": {
+    "message": "Selection tools, screenshots, clipboard history and shortcuts. Developer: Sercan Doğan"
+  },
+  "cmdScreenshot": {
+    "message": "SD Seçim: select screenshot area"
+  },
+  "cmdSettings": {
+    "message": "SD Seçim: open settings"
+  }
+}

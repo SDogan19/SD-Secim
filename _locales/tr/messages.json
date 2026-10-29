@@ -1,0 +1,11 @@
+{
+  "extDescription": {
+    "message": "Seçim araçları, ekran görüntüsü, pano geçmişi ve kısayollar. Geliştirici: Sercan Doğan"
+  },
+  "cmdScreenshot": {
+    "message": "SD Seçim: ekran görüntüsü alanı seç"
+  },
+  "cmdSettings": {
+    "message": "SD Seçim: ayarları aç"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title id="pageTitle">SD Seçim Ayarları</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f8fafc;color:#0f172a;padding:28px;margin:0}.card{max-width:620px;margin:auto;background:#fff;padding:24px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.08)}h2{display:flex;align-items:center;gap:10px;margin:0 0 20px;font-size:20px}.brand{width:38px;height:38px}.section{margin:22px 0}.section-title{font-weight:700;font-size:13px;color:#475569;margin-bottom:8px}.row{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid #f1f5f9}label{font-size:14px;cursor:pointer}select{padding:6px 10px;border:1px solid #cbd5e1;border-radius:8px;background:#fff}.hint{font-size:12px;line-height:1.5;color:#64748b;margin-top:8px}.toolbar-builder{border:1px solid #dbe4ee;border-radius:14px;padding:14px;background:#f8fafc}.toolbar-preview{min-height:54px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px;border-radius:12px;background:#fff;border:1px dashed #cbd5e1}.preview-row{display:flex;justify-content:center;gap:6px}.tool-chip{width:38px;height:38px;border-radius:10px;border:1px solid #dbe4ee;background:#f4f5f7;display:flex;align-items:center;justify-content:center;cursor:grab;user-select:none;position:relative}.tool-chip:active{cursor:grabbing}.tool-chip.dragging{opacity:.35}.tool-chip svg{width:16px;height:16px}.tool-chip .num{position:absolute;top:-6px;right:-6px;width:17px;height:17px;border-radius:50%;background:#0f6de8;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #fff}.tool-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.tool-item{display:flex;align-items:center;gap:9px;border:1px solid #e2e8f0;background:#fff;border-radius:10px;padding:9px 10px;cursor:pointer}.tool-item:hover{border-color:#94a3b8}.tool-item input{margin:0}.tool-item .mini{width:24px;height:24px;border-radius:7px;background:#f1f5f9;display:flex;align-items:center;justify-content:center}.tool-item .mini svg{width:16px;height:16px}.tool-item span:last-child{font-size:13px}.save-btn{width:100%;border:0;border-radius:9px;padding:10px 14px;background:#0f6de8;color:#fff;font-weight:700;cursor:pointer}.save-btn:hover{background:#0b59bf}#status{text-align:center;color:#059669;font-size:13px;font-weight:600;min-height:18px;margin-top:9px}.history-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}.history-controls{display:flex;align-items:center;gap:8px}.danger-btn{border:0;border-radius:8px;padding:7px 10px;background:#ef4444;color:#fff;font-size:12px;font-weight:700;cursor:pointer}.danger-btn:hover{background:#dc2626}.history-list{display:flex;flex-direction:column;gap:7px;max-height:340px;overflow:auto;padding-right:2px}.history-empty{padding:18px;text-align:center;border:1px dashed #cbd5e1;border-radius:10px;color:#94a3b8;font-size:13px}.history-item{display:flex;align-items:center;gap:9px;border:1px solid #e2e8f0;border-radius:10px;padding:8px;background:#fff}.history-preview{width:46px;height:34px;object-fit:cover;border-radius:5px;flex:0 0 auto}.history-text{min-width:0;flex:1}.history-main{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.history-meta{font-size:10px;color:#94a3b8;margin-top:2px}.history-actions{display:flex;gap:5px}.history-action{width:28px;height:28px;border:1px solid #dbe4ee;background:#f8fafc;border-radius:7px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}.history-action:hover{background:#eef2f7}.history-action.delete:hover{background:#fee2e2;border-color:#fecaca;color:#b91c1c}.footer{text-align:center;color:#94a3b8;font-size:12px;margin-top:18px}@media(max-width:560px){body{padding:12px}.card{padding:16px}.tool-list{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="card">
+<h2><img class="brand" src="icons/icon128.png" alt=""> SD Seçim</h2>
+<div class="section"><div class="section-title" id="appearanceTitle">Görünüm</div>
+<div class="row"><label for="uiLang" id="uiLangLabel">Dil</label><select id="uiLang"><option value="auto" id="uiAuto">Otomatik</option><option value="tr">Türkçe</option><option value="en">English</option></select></div>
+<div class="row"><label for="themeSelect" id="themeLabel">Tema</label><select id="themeSelect"><option value="light" id="themeLight">Açık</option><option value="dark" id="themeDark">Koyu</option></select></div></div>
+<div class="section"><div class="section-title" id="toolbarTitle">Araç çubuğu</div>
+<div class="toolbar-builder">
+  <div id="toolbarPreview" class="toolbar-preview"></div>
+  <div class="hint" id="toolbarHint">Araçları açtığın sıraya göre bara eklenir. Aktif ikonları sürükleyip bırakarak sıralayabilirsin.</div>
+  <div id="toolList" class="tool-list"></div>
+</div>
+</div>
+
+<div class="section"><div class="section-title" id="shortcutsTitle">Klavye kısayolları</div>
+<div class="row"><span id="shortcutScreenshotLabel">Ekran görüntüsü</span><strong id="shortcutScreenshot">Yükleniyor…</strong></div>
+<div class="row"><span id="shortcutSettingsLabel">Ayarları aç</span><strong id="shortcutSettings">Yükleniyor…</strong></div>
+<div class="hint" id="shortcutHint">Kısayolları değiştirmek için Chrome adres çubuğuna <code>chrome://extensions/shortcuts</code> yaz. Varsayılan: Mac ⌘⇧S / ⌘⇧A. Windows ve Linux: Ctrl+Shift+S / Ctrl+Shift+A.</div>
+</div>
+
+<div class="section"><div class="history-head"><div><div class="section-title" id="historyTitle" style="margin-bottom:2px">Pano geçmişi</div><div class="hint" id="historyHint" style="margin-top:0">Web sayfalarında kopyaladığın metinler ve ekran görüntüleri burada saklanır.</div></div><div class="history-controls"><label for="historyLimit" id="historyLimitLabel" style="font-size:12px;color:#64748b">Limit</label><select id="historyLimit"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select><button id="clearHistoryBtn" class="danger-btn" type="button">Tümünü temizle</button></div></div><div id="historyList" class="history-list"></div></div>
+<div class="section" id="translationSettings"><div class="section-title" id="translationTitle">Çeviri dili</div>
+<div class="row"><label for="sourceLang" id="sourceLangLabel">Kaynak</label><select id="sourceLang"><option value="auto">Otomatik</option><option value="en">İngilizce</option><option value="tr">Türkçe</option><option value="de">Almanca</option><option value="fr">Fransızca</option><option value="es">İspanyolca</option><option value="ru">Rusça</option></select></div>
+<div class="row"><label for="targetLang" id="targetLangLabel">Hedef</label><select id="targetLang"><option value="tr">Türkçe</option><option value="en">İngilizce</option><option value="de">Almanca</option><option value="fr">Fransızca</option><option value="es">İspanyolca</option><option value="ru">Rusça</option></select></div>
+</div>
+<button class="save-btn" id="saveBtn">Ayarları Kaydet</button><div id="status"></div>
+<div class="footer">
+  <div><strong>SD Seçim v0.0.1</strong></div>
+  <div style="margin-top:5px"><span id="developerLabel">Geliştirici</span>: <strong>Sercan Doğan</strong></div>
+  <div style="margin-top:4px"><a href="https://github.com/sercandogan19" target="_blank" rel="noopener noreferrer" style="color:#0f6de8;text-decoration:none">github.com/sercandogan19 ↗</a></div>
+</div>
+</div><script src="options.js"></script></body></html>
