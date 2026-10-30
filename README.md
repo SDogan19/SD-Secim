@@ -1,4 +1,4 @@
-# SD Seçim v0.0.2
+# SD Seçim v0.0.3
 
 **Geliştirici / Developer:** Sercan Doğan  
 **GitHub:** https://github.com/SDogan19/SD-Secim
