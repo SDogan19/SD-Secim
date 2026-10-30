@@ -2,7 +2,7 @@
 
 **Version:** 0.0.1  
 **Developer / Geliştirici:** Sercan Doğan  
-**GitHub:** https://github.com/sercandogan19
+**GitHub:** https://github.com/SDogan19/SD-Secim
 
 ## Türkçe
 
