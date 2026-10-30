@@ -1,6 +1,6 @@
 # SD Seçim Privacy Notice / Gizlilik Bildirimi
 
-**Version:** 0.0.1  
+**Version:** 0.0.3  
 **Developer / Geliştirici:** Sercan Doğan  
 **GitHub:** https://github.com/SDogan19/SD-Secim
 
