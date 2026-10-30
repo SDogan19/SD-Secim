@@ -1,7 +1,7 @@
 # SD Seçim v0.0.2
 
 **Geliştirici / Developer:** Sercan Doğan  
-**GitHub:** https://github.com/sercandogan19
+**GitHub:** https://github.com/SDogan19/SD-Secim
 
 SD Seçim, Chrome için açık kaynaklı; seçili metin araçları, ekran görüntüsü ve yerel pano geçmişi sunan hafif bir uzantıdır.
 
